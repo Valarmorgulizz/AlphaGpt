@@ -112,7 +112,7 @@ form {
 }
 
 #submit_btn:disabled {
-  background-color: rgb(60, 131, 246, 0.6);
+  background-color: rgba(236, 88, 0, 0.6);
   color: var(--bg);
 }
 .sendimg {
