@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --dark-white: #a4aebd;
+  --bg: #060606;
+  --primary: rgb(236, 88, 0);
+  --stroke-color: #4e4e4d;
+  --white: #e1e7ef;
+  --secondary: #fdd58c;
+  --disabled-btn: rgba(236, 88, 0, 0.6);
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  color: var(--white);
+  background-color: var(--bg);
+  height: 100vh;
+  line-height: 1.75;
+  padding: 8px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.logo img {
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+}
+header {
+  border-bottom: 1px solid var(--stroke-color);
+  padding: 1px;
+}
+.overlay {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 768px;
+  margin-inline: auto;
+}
+main {
+  height: 100%;
+  padding-top: 16px;
+  overflow-y: auto;
+}
+.ai_res {
+  background-color: var(--secondary);
+  padding: 16px;
+  border-radius: 12px;
+  width: fit-content;
+  color: var(--bg);
+}
+.user_prompt {
+  width: fit-content;
+  max-width: 100%;
+  background-color: var(--primary);
+  border-radius: 12px;
+  color: var(--bg);
+  padding: 8px 16px;
+  margin-left: auto;
+}
+footer {
+  border-top: 1px solid var(--stroke-color);
+  padding: 16px;
+}
+
+form {
+  max-width: 768px;
+  margin-inline: auto;
+}
+
+#chat_box {
+  resize: none;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  min-height: 70px;
+  color: var(--white);
+  padding: 16px;
+}
+
+.chat_form_div {
+  background-color: var(--bg);
+  border-radius: 8px;
+  border: 1px solid var(--stroke-color);
+  position: relative;
+  color: var(--white);
+}
+
+.chat_form_div:focus-within {
+  border-color: var(--primary);
+}
+
+#submit_btn {
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: var(--primary);
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  display: grid;
+  place-content: center;
+}
+
+#submit_btn:disabled {
+  background-color: rgb(60, 131, 246, 0.6);
+  color: var(--bg);
+}
+.sendimg {
+  width: 20px;
+  height: 20px;
+}
+.loading {
+  display: flex;
+  gap: 4px;
+}
+.loading span {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 100vmax;
+  background-color: var(--white);
+  animation: blink 1.4s infinite both;
+}
+
+.loading span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: o.1;
+  }
+}
